@@ -8,11 +8,25 @@ A tool to generate marketing campaign posters with customizable text, colors, an
 from PIL import Image, ImageDraw, ImageFont
 import argparse
 import os
+import sys
 from typing import Tuple, Optional
 
 
 class PosterGenerator:
     """Generate campaign posters with customizable elements."""
+    
+    # Common font paths for different operating systems
+    FONT_PATHS = [
+        # Linux
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        # macOS
+        "/System/Library/Fonts/Helvetica.ttc",
+        "/Library/Fonts/Arial.ttf",
+        # Windows
+        "C:\\Windows\\Fonts\\arial.ttf",
+        "C:\\Windows\\Fonts\\arialbd.ttf",
+    ]
     
     def __init__(self, width: int = 1200, height: int = 1600):
         """
@@ -24,6 +38,37 @@ class PosterGenerator:
         """
         self.width = width
         self.height = height
+    
+    def _get_font(self, size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
+        """
+        Get a font with fallback to default.
+        
+        Args:
+            size: Font size in pixels
+            bold: Whether to use bold font
+            
+        Returns:
+            ImageFont object
+        """
+        # Try common font paths
+        font_candidates = [
+            # Linux
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            # macOS
+            "/System/Library/Fonts/Helvetica.ttc",
+            # Windows
+            "C:\\Windows\\Fonts\\arialbd.ttf" if bold else "C:\\Windows\\Fonts\\arial.ttf",
+        ]
+        
+        for font_path in font_candidates:
+            try:
+                return ImageFont.truetype(font_path, size)
+            except (OSError, IOError):
+                continue
+        
+        # Fallback to default font
+        return ImageFont.load_default()
+    
         
     def create_poster(
         self,
@@ -54,16 +99,10 @@ class PosterGenerator:
         img = Image.new('RGB', (self.width, self.height), background_color)
         draw = ImageDraw.Draw(img)
         
-        # Try to use better fonts, fall back to default if not available
-        try:
-            title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 80)
-            subtitle_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 50)
-            desc_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 35)
-        except:
-            # Fallback to default font
-            title_font = ImageFont.load_default()
-            subtitle_font = ImageFont.load_default()
-            desc_font = ImageFont.load_default()
+        # Get fonts with cross-platform support
+        title_font = self._get_font(80, bold=True)
+        subtitle_font = self._get_font(50)
+        desc_font = self._get_font(35)
         
         if template == "modern":
             self._draw_modern_template(draw, title, subtitle, description, 
@@ -206,7 +245,7 @@ class PosterGenerator:
             output_path: Path to save the image
         """
         # Ensure output directory exists
-        os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else '.', exist_ok=True)
+        os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
         img.save(output_path, quality=95)
         print(f"Poster saved to: {output_path}")
 
