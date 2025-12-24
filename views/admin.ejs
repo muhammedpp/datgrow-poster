@@ -1,0 +1,54 @@
+<% const _include = (p) => include(p); %>
+<% const content = (()=>{ %>
+<section>
+  <h2>🎨 Create Campaign Template</h2>
+  <% if (typeof error !== 'undefined' && error) { %>
+    <div class="alert alert-error"><%= error %></div>
+  <% } %>
+  <form id="adminForm" action="/admin/templates" method="post" enctype="multipart/form-data">
+    <div class="grid">
+      <div>
+        <label>Poster Image (PNG/JPG)</label>
+        <input type="file" name="poster" id="posterInput" accept="image/png,image/jpeg" required />
+        <small>Recommended: high-resolution image</small>
+        <div id="posterStage" class="stage hidden">
+          <img id="posterPreview" alt="Poster preview" />
+          <div id="phOverlay" class="overlay hidden">
+            <div class="handle tl"></div>
+            <div class="handle tr"></div>
+            <div class="handle bl"></div>
+            <div class="handle br"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label>Placeholder Shape</label>
+        <div class="row">
+          <label><input type="radio" name="shape" value="square" checked /> Square</label>
+          <label><input type="radio" name="shape" value="circle" /> Circle</label>
+          <label><input type="radio" name="shape" value="rounded" /> Rounded</label>
+        </div>
+        <label>Rounded Radius (px)</label>
+        <input type="number" name="radius" id="radius" min="0" value="24" />
+        <hr/>
+        <label>Program Name (optional)</label>
+        <input type="text" name="programName" placeholder="e.g., Summer Hackathon" />
+        <label>Fixed Text (optional)</label>
+        <input type="text" name="fixedText" placeholder="Overrides default program text" />
+        <p class="muted">Default fixed text will be: "I am participating in [Program Name]"</p>
+        <hr/>
+        <button type="submit" class="btn primary" disabled id="saveBtn">Save Template</button>
+        <p class="muted">Draw and adjust the placeholder rectangle on the poster preview.</p>
+      </div>
+    </div>
+
+    <!-- Hidden fields populated by JS with intrinsic-pixel values -->
+    <input type="hidden" name="x" id="fieldX"/>
+    <input type="hidden" name="y" id="fieldY"/>
+    <input type="hidden" name="width" id="fieldW"/>
+    <input type="hidden" name="height" id="fieldH"/>
+  </form>
+</section>
+<script src="/public/js/admin.js"></script>
+<% return ''; })(); %>
+<%- include('layout', { body: content, title }) %>

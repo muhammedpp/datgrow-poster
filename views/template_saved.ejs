@@ -1,0 +1,22 @@
+<% const content = (()=>{ %>
+<section>
+  <h2>✅ Campaign Template Saved</h2>
+  <p class="muted" style="font-size:16px;margin-bottom:16px;">Share this link with your campaign participants:</p>
+  <p><a class="btn" href="<%= publicUrl %>"><%= publicUrl %></a></p>
+  <div class="grid">
+    <div>
+      <img src="<%= posterUrl %>" alt="Poster" class="shadow" style="max-width:100%"/>
+    </div>
+    <div>
+      <h3>Placeholder</h3>
+      <pre><%= JSON.stringify(template.placeholder, null, 2) %></pre>
+      <% if (template.text && template.text.fixedText) { %>
+      <h3>Fixed Text</h3>
+      <p><%= template.text.fixedText %></p>
+      <% } %>
+      <p><a href="/admin" class="btn">Create another template</a></p>
+    </div>
+  </div>
+</section>
+<% return ''; })(); %>
+<%- include('layout', { body: content, title }) %>

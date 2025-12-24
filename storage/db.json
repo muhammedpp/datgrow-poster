@@ -1,0 +1,376 @@
+{
+  "templates": [
+    {
+      "id": "iisbangnt5oo",
+      "posterFilename": "iisbangnt5oo.png",
+      "placeholder": {
+        "x": 1079,
+        "y": 1466,
+        "width": 959,
+        "height": 959,
+        "shape": "circle",
+        "radius": 50
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T06:07:34.643Z"
+    },
+    {
+      "id": "3kct16snsbw1",
+      "posterFilename": "3kct16snsbw1.png",
+      "placeholder": {
+        "x": 898,
+        "y": 1161,
+        "width": 1440,
+        "height": 1440,
+        "shape": "circle",
+        "radius": 35
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T06:10:05.691Z"
+    },
+    {
+      "id": "d3s4wjrg9wv9",
+      "posterFilename": "d3s4wjrg9wv9.png",
+      "placeholder": {
+        "x": 881,
+        "y": 1161,
+        "width": 1470,
+        "height": 1414,
+        "shape": "circle",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T06:19:00.615Z"
+    },
+    {
+      "id": "criemgkdradb",
+      "posterFilename": "criemgkdradb.png",
+      "placeholder": {
+        "x": 868,
+        "y": 1165,
+        "width": 1500,
+        "height": 1419,
+        "shape": "circle",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T06:34:09.282Z"
+    },
+    {
+      "id": "wcl0qx42fa2v",
+      "posterFilename": "wcl0qx42fa2v.png",
+      "placeholder": {
+        "x": 937,
+        "y": 1165,
+        "width": 1389,
+        "height": 1431,
+        "shape": "circle",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T06:42:07.956Z"
+    },
+    {
+      "id": "8ci7su6g5oc5",
+      "posterFilename": "8ci7su6g5oc5.png",
+      "placeholder": {
+        "x": 1089,
+        "y": 1391,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:29:50.408Z"
+    },
+    {
+      "id": "4ypr74pefb9p",
+      "posterFilename": "4ypr74pefb9p.png",
+      "placeholder": {
+        "x": 1089,
+        "y": 1391,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:33:04.402Z"
+    },
+    {
+      "id": "4yqy490fnes3",
+      "posterFilename": "4yqy490fnes3.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:34:03.504Z"
+    },
+    {
+      "id": "6r4ziee748ky",
+      "posterFilename": "6r4ziee748ky.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:35:52.469Z"
+    },
+    {
+      "id": "jat1ya6usrcw",
+      "posterFilename": "jat1ya6usrcw.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:35:59.939Z"
+    },
+    {
+      "id": "3unn2zym2rx2",
+      "posterFilename": "3unn2zym2rx2.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:36:30.758Z"
+    },
+    {
+      "id": "e10oqeyncy82",
+      "posterFilename": "e10oqeyncy82.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:37:35.913Z"
+    },
+    {
+      "id": "631lskaxvgz6",
+      "posterFilename": "631lskaxvgz6.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:38:07.143Z"
+    },
+    {
+      "id": "239vmwf3s0zw",
+      "posterFilename": "239vmwf3s0zw.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:40:00.619Z"
+    },
+    {
+      "id": "dajg2mioirw1",
+      "posterFilename": "dajg2mioirw1.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:41:40.362Z"
+    },
+    {
+      "id": "zo1iuxizjhge",
+      "posterFilename": "zo1iuxizjhge.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:42:36.961Z"
+    },
+    {
+      "id": "hlydwyxpp1he",
+      "posterFilename": "hlydwyxpp1he.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:46:08.665Z"
+    },
+    {
+      "id": "age4gyspiloo",
+      "posterFilename": "age4gyspiloo.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:47:22.381Z"
+    },
+    {
+      "id": "dd3uwcwx4xf3",
+      "posterFilename": "dd3uwcwx4xf3.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:48:41.077Z"
+    },
+    {
+      "id": "48mcfpevwel7",
+      "posterFilename": "48mcfpevwel7.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:49:20.376Z"
+    },
+    {
+      "id": "f4302lh3ilfv",
+      "posterFilename": "f4302lh3ilfv.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:50:25.084Z"
+    },
+    {
+      "id": "819n5f9gj9rr",
+      "posterFilename": "819n5f9gj9rr.png",
+      "placeholder": {
+        "x": 1120,
+        "y": 1120,
+        "width": 962,
+        "height": 962,
+        "shape": "square",
+        "radius": 24
+      },
+      "text": {
+        "fixedText": ""
+      },
+      "createdAt": "2025-12-24T07:50:50.892Z"
+    }
+  ],
+  "generated": [
+    {
+      "id": "m9fty7jqjzit",
+      "templateId": "criemgkdradb",
+      "file": "m9fty7jqjzit.png",
+      "name": "",
+      "city": "",
+      "memberId": "",
+      "createdAt": "2025-12-24T06:34:35.024Z"
+    },
+    {
+      "id": "w8a6o0js440t",
+      "templateId": "zo1iuxizjhge",
+      "file": "w8a6o0js440t.png",
+      "name": "",
+      "city": "",
+      "memberId": "",
+      "createdAt": "2025-12-24T07:43:35.494Z"
+    }
+  ]
+}

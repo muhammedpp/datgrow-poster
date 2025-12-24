@@ -1,0 +1,48 @@
+<% const content = (()=>{ %>
+<section>
+  <h2>✨ Personalize Your Campaign Poster</h2>
+  <p class="muted"><%= instructions %></p>
+  
+  <div class="grid">
+    <div>
+      <div class="stage">
+        <img id="posterImg" src="<%= posterUrl %>" alt="Poster" />
+        <div class="overlay-guide" style="left:<%= template.placeholder.x %>px;top:<%= template.placeholder.y %>px;width:<%= template.placeholder.width %>px;height:<%= template.placeholder.height %>px;
+             border-radius:<%= template.placeholder.shape === 'circle' ? '50%' : (template.placeholder.shape === 'rounded' ? template.placeholder.radius + 'px' : '0') %>"></div>
+      </div>
+    </div>
+    <div class="right-column">
+      <form id="publicForm" action="/p/<%= template.id %>/generate" method="post" enctype="multipart/form-data" class="form-modern">
+        <div class="form-group">
+          <label class="form-label">📸 Your Photo</label>
+          <div class="file-input-wrapper">
+            <input type="file" name="photo" id="userPhoto" accept="image/png,image/jpeg" required class="file-input" />
+            <div class="file-input-label">
+              <span class="file-icon">📁</span>
+              <span class="file-text">Choose JPG or PNG image</span>
+            </div>
+          </div>
+          <small class="form-hint">Any size accepted • Automatically resized & center-cropped</small>
+        </div>
+
+        <div class="form-divider"></div>
+
+        <button type="submit" class="btn primary btn-large" id="genBtn" disabled>✨ Generate Poster</button>
+      </form>
+
+      <div class="about-box">
+        <h3>🚀 About Datgrow</h3>
+        <p class="about-box-subtitle">AI-Powered Analytics & Automation</p>
+        <p class="about-box-desc">Delivering predictive insights to drive growth across business, education, and personal domains.</p>
+        <a href="https://www.datgrow.com" target="_blank" class="about-box-link">Visit www.datgrow.com →</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  window.__APP__ = window.__APP__ || {};
+  window.__APP__.placeholder = <%- JSON.stringify(template.placeholder) %>;
+</script>
+<script src="/public/js/public.js?v=2"></script>
+<% return ''; })(); %>
+<%- include('layout', { body: content, title }) %>

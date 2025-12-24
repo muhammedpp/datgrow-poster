@@ -1,0 +1,55 @@
+<%
+  const shareUrlValue = shareUrl || 'Link unavailable';
+  const downloadUrlValue = downloadUrl || '#';
+  const whatsappValue = whatsapp || '#';
+%>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Poster</title>
+  <link rel="stylesheet" href="/css/styles.css?v=5">
+</head>
+<body>
+  <%- include('./layout.ejs', { 
+    body: `
+      <section>
+        <h2>🎉 Your Campaign Poster Is Ready!</h2>
+        <div class="result">
+          <img src="${imageUrl}" alt="Generated Poster" class="shadow" />
+        </div>
+
+        <div class="link-section">
+          <p class="link-section-title">📎 Share this link with your campaign participants:</p>
+          
+          <div class="link-box">
+            <input type="text" class="link-field" id="shareLink" value="${shareUrlValue}" readonly>
+            <button class="btn-copy" onclick="copyToClipboard()">📋 Copy Link</button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="${downloadUrlValue}" download>📥 Download PNG</a>
+          <a class="btn" href="${shareUrlValue}" target="_blank">🔗 Open Share Link</a>
+          <a class="btn" href="${whatsappValue}" target="_blank">💬 Share via WhatsApp</a>
+        </div>
+      </section>
+
+      <script>
+        function copyToClipboard() {
+          const shareLink = document.getElementById('shareLink').value;
+          navigator.clipboard.writeText(shareLink).then(() => {
+            alert('✅ Link copied to clipboard!');
+          }).catch(err => {
+            console.error('Error copying:', err);
+            alert('Error copying link');
+          });
+        }
+      </script>
+    `,
+    title: 'Your Poster'
+  }) %>
+</body>
+</html>
